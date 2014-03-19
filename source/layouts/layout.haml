@@ -14,11 +14,13 @@
     = stylesheet_link_tag "app", "theme", "ghfm"
     = javascript_include_tag "foundation/modernizr.foundation"
     %link{rel: "alternate", type: "application/rss+xml", title: "RSS Feed", href: "feed.xml"}
-  %body{class: page_classes}
+  %body{class: page_classes, :background => "ffb0c4de"}
     .row
       .twelve.columns
         %h2
           %a{href: "/"}= data.site.title
+          %p= data.site.subtitle
+          %img{src: "../images/EmilyAidez.jpg", :width => "190px"}
         %hr
     .row
       .eight.columns
