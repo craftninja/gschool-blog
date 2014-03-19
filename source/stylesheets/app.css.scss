@@ -68,3 +68,7 @@ pre.highlight {
   border-right: 1px solid #e6e6e6;
   font-weight: bold;
 }
+.tabs dd.active, .tabs li.active {
+  border-top: 3px solid #1abc9c;
+  margin-top: -3px;
+}
