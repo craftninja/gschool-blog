@@ -1,0 +1,33 @@
+---
+title: Maker
+date: 2014-03-19 05:00 UTC
+tags: maker, oldways, beginning, gschool, ruby, nature, technology
+---
+
+I like making things.
+
+There is something amazing about taking raw materials and putting them together in certain ways and orders and creating
+something new. Or old, but yours.
+
+The things we use and touch can be understood. If we listen, we can learn from them. Touch something that stirs your heart,
+and listen. Think of your human sisters and brothers who crafted that beauty, the plants and animals and minerals that came
+together to sing their song for you. Listen for that song, not only in the land of nature, but also in the land of machines.
+Listen for that song, not only in the land of machines, but also in the land of nature. If that song is sour, what can
+we do to sweeten the song?
+
+I have traversed some of the old ways, lightly, lovingly, and the old human ways and songs reverberate in my life. The thread
+of our culture and lineage is beautiful, fascinating, and __shared__ by __all of us__ earthling humans. Our old true culture is the
+same... edible plants, hunting and trapping, traditional medicine, tracking, shelter, fire-making, tanning, baskets, love, family, children,
+friends. We are the same, our roots are from one tree.
+
+I have traversed some of the new ways, lightly, lovingly, and the new human ways and songs reverberate in my life. Our human
+world is becoming one again. We can share, collaborate, communicate with almost anyone daily, if not instantly. We are making
+things that can help each other learn, grow, love, connect... protect each other. Support each other. Make our lives better.
+
+Sometimes there is pressure to 'pick a side', nature or technology. There are no sides. We are the caretakers of nature,
+our collection can make landscapes more diverse, strong, resilient... if we choose to hear what nature needs. We are also makers.
+We have created so much with our little tools, with help from our lovely machines. We must not choose a side, we must sing
+with everyone, we must sing all the songs as sweetly as we can.
+
+I am learning to hear a new song. I started gSchool just over two weeks ago. I am lucky, in Boulder many people do not choose
+sides. My instructors resonate with the song of the wild, and they resonate with the song of machines. We are learning Ruby.
