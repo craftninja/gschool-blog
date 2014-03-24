@@ -1,0 +1,71 @@
+---
+title: Beginning
+date: 2014-03-24 01:42 UTC
+tags: gSchool, Ruby, setup, terminal, GitHub, pine, beginning
+---
+
+It's a bit of a shock to think that three full weeks have passed.
+
+I started gSchool three weeks ago, and it's a bit insane how much we have learned. I really don't know where to start.
+
+First we set up our computers. Luckily, our instructors Mike and Jeff compiled a complete run-through of our computer setup.
+We started with a fresh MacBook Air and followed [the instructions](http://tutorials.gschool.it/computer_setup). I'm sure
+it's all super important, but I just want to give a special shout out to GitHub, RubyMine, ScreenHero, and of course our dear
+sweet Ruby. I love you guys so hard every single day.
+
+But seriously, looking through there, I don't see any fluff.
+
+So once you have that all set up...
+
+If you really did set your computer up as outlined by the gSchool site, you will have a special folder for all your
+projects (you can rename it to something like "totally\_amazing\_ruby\_folder" or "mad\_programs\_yo"). Be sure to cd (see below) into that
+folder and make a new project folder for each group of exercises. And then you can put that up on GitHub and show your friends
+and maybe people will comment and help you out. It's pretty cool.
+
+Wait, have you used terminal before? I promise, it's not too scary. Most of the time, you can't accidently ruin everything.
+I'm pretty sure, anyway. So far, so good. So yes, terminal. There are a lot... a LOT... of commands that I don't regularly use.
+However, here are some of my faves:
+
+* **pwd** : Print Working Directory. Aka, what the hell folder am I in right now?
+* **mkdir &lt;directory name>** : MaKe DIRectory, followed by whatever you want to name that directory. DO THIS while you are "standing"
+in the directory you want to put that thing.
+* **cd &lt;directory name>** : Change Directory. You can only "change" down in to directories... to go up you need to either use ".." meaning
+up one directory or "~/" which will start you from your "home" directory.
+* **ls -l** : LiSt contents of directory you are "standing" in. The "-l" is sorta optional... try it with and without and you'll
+see why I prefer the -l.
+* **mv &lt;location if necessary/filename.ext> &lt;new location if necessary/filename.ext** : MoVe a folder or directory to a new location.
+This command also is for renaming stuff, in which case you put the new name second. Remember to put it in the location you want!
+* **open &lt;filename or directory>** : opens a file with whatever program is defaulted to run it, OR opens a window of that directory.
+* **touch &lt;filename.ext>** : create a new file with that filename. Seriously, touch? Who's idea was that?
+* **vim &lt;filename.ext>** : opens the file in a quick and dirty (and apparently totally badass) text editor. If the file doesn't exist,
+it will also create the file. ALSO: press "i" to insert text, and then escape to exit "insert" mode and ":wq" to save changes
+and quit, or just ":q" to exit without saving changes. VIM is a sneaky bastard, you think you don't like it and then end up using it
+every day. Dang you VIM!
+
+So, weren't we going to do some programming? I have to say, I really like the book [Learn to Program by Chris Pine]
+(http://www.amazon.com/Program-Second-Edition-Facets-Series/dp/1934356360/ref=sr_1_1?ie=UTF8&qid=1395634556&sr=8-1&keywords=learn+to+program).
+There are tons of tutorials out there online (and you don't even have to download Ruby for a lot of them) but this book
+just shines. There is even a [online free version](https://pine.fm/LearnToProgram/) (not updated for Ruby 2).
+Milovely Luke and I meticulously followed the lessons until
+we started giving each other "challenges" to write some program or another, and then we just started making things.
+Of course, after a while, we would run into problems that required a new tool, and back to the book we went. I'd say, after
+you get fairly comfortable using this book as a reference, step it up a notch and check the [Ruby Docs](http://Ruby-Docs.org) website.
+It is fairly dense, but after a while you begin to understand things. Just ease yourself into it.
+
+The [Exercism website](http://exercism.io/) is also pretty great. The purpose a bit different than GitHub, although you
+do push code there too. But you push code to Exercism more for feedback rather than deployment. I have seen some amazing
+feedback from strangers and some just ok,  so read through it all
+and take what you need. Or just browse other beginners' code and feedback, it really does teach you a lot to just read and understand
+somebody else's code. All our brains are different, and we all solve problems in a different way, and that can be pretty amazing. One
+suggestion is to only "fetch" the next specific ruby exercise, or all the languages' exercises will be downloaded (exercism fetch
+ruby &lt;next exercise>). There is a [list at GitHub](https://github.com/exercism/xruby/blob/master/EXERCISES.txt).
+
+Oh yeah, GitHub. It's a bit to take in. I'd start with the [GitHub tutorial](http://try.github.io/). It is simple and
+fairly short, a nice quick overview of basic Git workflow and commands. The book [Pro Git]
+(http://www.amazon.com/gp/product/1430218339?ie=UTF8&camp=1789&creative=9325&creativeASIN=1430218339&linkCode=as2&tag=git-sfconservancy-20)
+(also available [online](http://git-scm.com/book))
+is pretty awesome too. I love the examples in this book, and it seems like a great reference.  Also, and a bit more visual
+is [Visualizing Git Concepts with D3](http://www.wei-wang.com/ExplainGitWithD3/).
+
+Well that's a lot of lightly explained heavy stuff. It's a lot, I know. Tools can be a bit boring to talk about, and get
+up and going. But if you follow through, you can really start making things!

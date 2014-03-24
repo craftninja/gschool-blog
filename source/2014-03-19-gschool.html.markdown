@@ -1,7 +1,7 @@
 ---
 title: Maker
 date: 2014-03-19 05:00 UTC
-tags: maker, oldways, beginning, gschool, ruby, nature, technology
+tags: maker, oldways, beginning, gSchool, Ruby, nature, technology
 ---
 
 I like making things.
