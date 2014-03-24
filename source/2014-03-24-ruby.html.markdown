@@ -6,7 +6,7 @@ tags: gSchool, Ruby, setup, terminal, GitHub, pine, beginning
 
 It's a bit of a shock to think that three full weeks have passed.
 
-I started gSchool three weeks ago, and it's a bit insane how much we have learned. I really don't know where to start.
+I started gSchool three weeks ago, and we have learned an incredible amount. I really don't know where to start.
 
 First we set up our computers. Luckily, our instructors Mike and Jeff compiled a complete run-through of our computer setup.
 We started with a fresh MacBook Air and followed [the instructions](http://tutorials.gschool.it/computer_setup). I'm sure
