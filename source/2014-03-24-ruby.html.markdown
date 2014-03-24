@@ -69,3 +69,4 @@ is [Visualizing Git Concepts with D3](http://www.wei-wang.com/ExplainGitWithD3/)
 
 Well that's a lot of lightly explained heavy stuff. It's a lot, I know. Tools can be a bit boring to talk about, and get
 up and going. But if you follow through, you can really start making things!
+
