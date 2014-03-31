@@ -4,14 +4,9 @@ date: 2014-03-31 05:43 UTC
 tags: Ruby, Exercism, DNA, code
 ---
 
-So in my previous post I mentioned [Exercism](http://exercism.io/). This website consists of a series of coding challenges in several different
-coding languages. My chosen track is Ruby, of course. Again, the list of exercises in this track is at
-[GitHub](https://github.com/exercism/xruby/blob/master/EXERCISES.txt).
+So in my previous post I mentioned [Exercism](http://exercism.io/). This website consists of a series of coding challenges in several different coding languages. My chosen track is Ruby, of course. Again, the list of exercises in this track is at [GitHub](https://github.com/exercism/xruby/blob/master/EXERCISES.txt).
 
-I have worked through several of the exercises thus far. One whose very premise made me happy was the Hamming exercise...
-put in two lengths of DNA and calculate their Hamming distance. In one of my previous incarnations, I worked in a lab tossing plasmids
-into sweet innocent bacterial strains... slave labour to manufacture proteins. Anyway, I knew exactly what this exercise
-was trying to measure.
+I have worked through several of the exercises thus far. One whose very premise made me happy was the Hamming exercise... put in two lengths of DNA and calculate their [Hamming distance](http://en.wikipedia.org/wiki/Hamming_distance). In one of my previous incarnations, I worked in a lab [tossing plasmids into sweet innocent bacterial strains](http://en.wikipedia.org/wiki/Molecular_cloning)... slave labour to manufacture proteins. Anyway, I knew exactly what this exercise was trying to measure.
 
 Following is the README, or basic instructions of the exercise:
 ***
@@ -54,9 +49,7 @@ end
 </code></pre>
 ***
 
-In my second iteration, I realized that there is no need to split the DNA strand into an array due to the each\_char method.
-In addition, iterating to the end of strand 1 and ensuring that we were comparing to an existing base pair in strand 2,
-the length\_shortest\_strand variable could be eliminated.
+In my second iteration, I realized that there is no need to split the DNA strand into an array due to the each\_char method. In addition, iterating to the end of strand 1 and ensuring that we were comparing to an existing base pair in strand 2, the length\_shortest\_strand variable could be eliminated.
 
 ***
 <pre><code>
@@ -75,8 +68,7 @@ end
 </code></pre>
 ***
 
-My last iteration utilized the with\_index method to eliminate the iterator variable. I also assigned the individual base
-pairs that were being compared to the variable base\_pair\_a and base\_pair\_b for more readability.
+My last iteration utilized the with\_index method to eliminate the iterator variable. I also assigned the individual base pairs that were being compared to the variable base\_pair\_a and base\_pair\_b for more readability.
 
 ***
 <pre><code>
