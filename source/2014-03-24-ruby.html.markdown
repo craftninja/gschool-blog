@@ -1,7 +1,7 @@
 ---
 title: Beginning
 date: 2014-03-24 01:42 UTC
-tags: gSchool, Ruby, setup, terminal, GitHub, pine, beginning
+tags: gSchool, Ruby, setup, terminal, GitHub, Chris_Pine, beginning, Exercism, ruby-doc
 ---
 
 It's a bit of a shock to think that three full weeks have passed.
