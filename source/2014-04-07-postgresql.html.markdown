@@ -114,3 +114,14 @@ Looks like it's gone! And now to say goodnight to sweet server postgres...
 
     postgres => \q
 
+### Need all those commands in one file?
+
+[Check out this sweet script!](/example_files/2014-04-07-postgresql/postgres_commands.sql)
+
+You can run it all at once...
+
+    $ psql -U username -d postgres -f scripts/postgres_commands.sql
+
+Oh look at that, you can switch the order of things there.
+
+Happy Databasing!
