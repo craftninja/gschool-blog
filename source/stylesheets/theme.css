@@ -1,15 +1,15 @@
 body {
-  background: #FAEBD7;
+  background: #FAF0EF;
   font-family: "Lustria", "Helvetica Neue", "HelveticaNeue", Helvetica, sans-serif;
   font-size: 14px;
   line-height: 18px;
-  color: #222222;
+  color: #33251F;
 }
 a {
-  color: #1abc9c;
+  color: #0E434C;
 }
 a:hover {
-  color: #16a085;
+  color: #17707F;
 }
 header {
   padding: 3em 0px 3em 0px;
@@ -48,7 +48,7 @@ h6,
 .top-nav,
 .nav-bar,
 .sub-nav {
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'IM Fell Great Primer', serif;
 }
 .bottom-border {
   border-bottom: 4px solid #a2a2a2;
@@ -76,10 +76,10 @@ a.logo:hover {
   border-top: 4px solid #ededed;
 }
 div.panel {
-  background: #efefef;
-  background: -moz-linear-gradient(top, #e5e5e5 0%, #dedede 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fffaf0), color-stop(100%, #fffafa));
-  background: -o-linear-gradient(top, #e5e5e5 0%, #dedede 100%);
+  background: #FAF0EF;
+  background: -moz-linear-gradient(top, #FAF0EF 0%, #AD998E 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FAF0EF), color-stop(100%, #AD998E));
+  background: -o-linear-gradient(top, #FAF0EF 0%, #AD998E 100%);
 }
 .blue.button {
   background-color: #2f84c2;
