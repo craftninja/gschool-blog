@@ -107,7 +107,7 @@ Lets get a little crazy... lets have our dear friend Vicky announce that first l
 
 Whoa! More new weirdness! So now we extracted that <code>welcome\_message</code>, and since it was so long we did a special <code>+=</code> method to just concatenate that big boy. It also makes it much easier to change if we decide to do that. And since we have a variable holding that string for Vicky to say, we can "interpolate" that string in line 4. To do this, our string needs to be in double quotes, which we have magically done with the <code>%Q{}</code>. Then, within that string, we put the variable inside of <code>#{}</code>. Kinda magic! The sleep command does what you think... just a little 1 second rest for your sweet CPU. And look how nice that spacing is... much more readable.
 
-Oh and did you run that little baby? Sweeeeet! Looks like a great time to commit to Git and share! [Here is mine](https://github.com/craftninja/blog_catsup_timer)!
+Oh and did you run that little baby? Sweeeeet! Looks like a great time to commit to Git and share!
 
     $ git init
     $ git status
@@ -130,9 +130,11 @@ Make sure your code is looking fresh!
 + Choose a voice
 + Create two timers at the beginning, one for the work (25 min?) and one for the break (5 min?). The second autostarts after completion of the first timer.
 
-## Mad props to [Jeff Dean](http://www.jeffmdean.com/)
+### Mad props to [Jeff Dean](http://www.jeffmdean.com/)
 
 + for being an all around badass
 + and also for sending his gStudents that monster second line of code up there
 + and for assigning the "little terminal pomodoro" challenge
 + it was done in a pomodoro, btw, ftw. Mine definitely was not this simple after 25 min... what a rambling mess. No, I can't show you. It was hidden between commits. And kinda gross.
+
+### [Check it out on GitHub!](https://github.com/craftninja/blog_catsup_timer)

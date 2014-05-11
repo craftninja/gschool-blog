@@ -217,4 +217,4 @@ Run rspec, check out the glory in your browser, and don't forget to pump that fi
 
 Super! If you are totally into [CRUD](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete), we just checked the first two boxes off our list. Well done! Next on the list is Update and Delete. Lets do that next week when we start using databases!
 
-### [Check it out in Git!](https://github.com/craftninja/blog_love_notes)
+### [Check it out on GitHub!](https://github.com/craftninja/blog_love_notes)

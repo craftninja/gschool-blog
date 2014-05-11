@@ -4,7 +4,7 @@ date: 2014-05-05 03:00 UTC
 tags: ruby, sinatra, postgres, rspec, capybara
 ---
 
-So last week we created an app with Sinatra using an array as our data storage. If you played around with that, you realize that it has a major shortcoming... every time you restart the server, all your data has vanished! Well, that's not really going to work. A much better way to store data is in a database. If that sounds terribly terrifying to you, go back and refresh yourself with the [PostgreSQL](http://emily-platzer-makes-things.herokuapp.com/2014/04/07/postgresql.html) post and the [Basic Web app with Sinatra](http://emily-platzer-makes-things.herokuapp.com/2014/04/28/basic-sinatra-ruby-rspec.html) post.
+So last week we created an app with Sinatra using an array as our data storage. If you played around with that, you realize that it has a major shortcoming... every time you restart the server, all your data has vanished! Well, that's not really going to work. A much better way to store data is in a database. If that sounds terribly terrifying to you, go back and refresh yourself with the [PostgreSQL](http://www.emilyplatzer.io/2014/04/07/postgresql.html) post and the [Basic Web app with Sinatra](http://www.emilyplatzer.io/2014/04/28/basic-sinatra-ruby-rspec.html) post.
 
 Yay! This is about to get legit. You know how the song starts...
 
@@ -121,7 +121,7 @@ So we are going to <code>post</code> the information gathered by this form to <c
 
 And rspec says it's all good. Check that in the browser... not quite done here, but things are working as we outlined them in the spec. Let's commit this and then we will dive into our database refactor. You know how to commit by now, just run <code>git status</code> before you commit to make sure you have everything ready to go.
 
-That <code>post</code> kinda works, but really we want to store this information in the database. Lets create that database. If this seems too scary, remember to go back to the [PostgreSQL blog post](http://emily-platzer-makes-things.herokuapp.com/2014/04/07/postgresql.html) from a few weeks ago.
+That <code>post</code> kinda works, but really we want to store this information in the database. Lets create that database. If this seems too scary, remember to go back to the [PostgreSQL blog post](http://www.emilyplatzer.io/2014/04/07/postgresql.html) from a few weeks ago.
 
 So we are going to write a script that will create our databases for us, and then outline the implementation in the README. The script lives in a <code>scripts</code> folder, is named <code>create\_database\_good\_vids.sql</code>, and will be exactly what we would normally write in the postgres server:
 
