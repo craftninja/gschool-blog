@@ -21,7 +21,7 @@ We hurried over to QuickLeft and were delighted to find that we could still join
 
 We had decided to create one of my favorite games as a kid, Number Stumper from the Texas Instruments toy [Speak\&Math](http://smithsonianchips.si.edu/texas/ref434.htm).
 
-[<img src="/images/20140519_stumperstumper/speak_and_math.jpg" alt="Speak&Math" width="600em">](/images/20140519_stumperstumper/speak_and_math.jpg)
+[<img src="http://vintage-synthesizer.com/wp-content/uploads/2013/06/Texas-Instruments-Speak-Math-Circuit-Bending.jpg" alt="Speak&Math" width="600em">](http://vintage-synthesizer.com/wp-content/uploads/2013/06/Texas-Instruments-Speak-Math-Circuit-Bending.jpg)
 
 This was my favorite toy as a kid. I remember going on road trips all the time with my parents and sister, and Amber and I would play Number Stumper. This game is a variant of an old codebreaking game called [Bulls and Cows](http://en.wikipedia.org/wiki/Bulls_and_cows) that is rumoured to be over 100 years old. Another variant of this game came to market in 1970 as [MasterMind](http://en.wikipedia.org/wiki/Mastermind_(board_game)) and is [still in production](http://www.amazon.com/Pressman-Toy-3018-06B-Mastermind/dp/B00000DMBF).
 
