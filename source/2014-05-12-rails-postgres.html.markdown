@@ -116,7 +116,7 @@ Now we add that to the <code>routes</code> file.
 
     get '/song/new' => 'song#new'
 
-And now we need to add the action 'new' to the Playlist Controller.
+And now we need to add the action 'new' to the Song Controller.
 
     def new
     end
@@ -146,7 +146,7 @@ Now we are missing a template. However, we really don't want a new view for this
     song.save
     redirect_to '/song'
 
-Rake spec tells us that we have an uninitialized constant <code>PlaylistController::Song</code>. Check it out in localhost, too. Oh no, what's that? An invalid authenticity token? Go to <code>app/controller/application\_controller.rb</code> and comment out line 4 <code>protect\_from\_forgery with: :exception</code>. Refresh the browser. Ah, now our spec and browser agree. We will add a new file <code>app/models/song.rb</code> with the following code:
+Rake spec tells us that we have an uninitialized constant <code>SongController::Song</code>. Check it out in localhost, too. Oh no, what's that? An invalid authenticity token? Go to <code>app/controller/application\_controller.rb</code> and comment out line 4 <code>protect\_from\_forgery with: :exception</code>. Refresh the browser. Ah, now our spec and browser agree. We will add a new file <code>app/models/song.rb</code> with the following code:
 
     class Song < ActiveRecord::Base
     end
@@ -217,7 +217,7 @@ Rspec tells us we need a new get route.
 
     get '/song/:id' => 'song#show'
 
-Next, show cannot be found for PlaylistController. We put that in the <code>song\_controller.rb</code>.
+Next, show cannot be found for SongController. We put that in the <code>song\_controller.rb</code>.
 
     def show
     end
