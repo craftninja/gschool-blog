@@ -4,7 +4,7 @@ date: 2014-05-12 03:00 UTC
 tags: ruby, programming, rspec, capybara, Rails, postgres
 ---
 
-Guess what we are going to do today? Make a Rails app using PostgreSQL! Hooray! So what is our project going to be about? Lets make a playlist and link some hott tunes up in here. CD into the parent directory of where you would like this project directory to live... rails is going to be doing quite a bit of work for us, starting with creation of that project directory.
+Guess what we are going to do today? Make a Rails app using PostgreSQL! Hooray! So what is our project going to be about? Lets make a list of songs and link some hott tunes up in here. CD into the parent directory of where you would like this project directory to live... rails is going to be doing quite a bit of work for us, starting with creation of that project directory.
 
     $ rails new music_playlist --database=postgresql --skip-test-unit --skip-spring
 
@@ -42,7 +42,7 @@ OMG so many files! This is a special exception to the "never <code>$ git add .</
     $ git add .
     $ git commit -m "Initial commit. Rspec, Capybara gems added, running Postgres."
 
-Now it's time to get this party started! Create a new directory <code>features</code> in the spec directory, and then create the file <code>playlist_spec.rb</code> inside that directory containing the following code:
+Now it's time to get this party started! Create a new directory <code>features</code> in the spec directory, and then create the file <code>song_spec.rb</code> inside that directory containing the following code:
 
     require 'spec_helper'
 
@@ -71,19 +71,18 @@ That line of code is going to direct a few things... the name of the new control
 The "missing template" indicates that rake spec wants a view. Add a new dir and file <code>app/views/dashboard/index.html.erb</code> with the <code>h1</code> text "Welcome to PlaylistLand". Rake spec again.  Yeah!
 
     $ git status
-    $ git add -N app/controllers/dashboard_controller.rb
-    $ git add -N app/views/dashboard/index.html.erb spec/features/playlist_spec.rb
+    $ git add -N app/ spec/
     $ git add -p
     $ git commit -m "User is Welcomed on the homepage"
 
-Well done! Now we will change the test to reflect direction the app will take... in <code>spec/features/playlist\_spec.rb</code>, change the spec within the scenario block to the following:
+Well done! Now we will change the test to reflect direction the app will take... in <code>spec/features/song\_spec.rb</code>, change the spec within the scenario block to the following:
 
     scenario 'User can add titles, links to the homepage' do
       visit '/'
-      playlist_link = 'Welcome to PlaylistLand'
+      song_link = 'Welcome to PlaylistLand'
       title = "Mokadem - 'Mokadem' EP"
       url = 'https://soundcloud.com/thump/sets/mokadem-mokadem-ep'
-      click_on playlist_link
+      click_on song_link
       click_on 'Add new Jam'
       fill_in 'Title', with: title
       fill_in 'URL', with: url
@@ -94,37 +93,37 @@ Well done! Now we will change the test to reflect direction the app will take...
 
 Rake spec tells us that it cannot find the link. Let's turn that <code>h1</code> into a link.
 
-    <h1><a href="/playlist">Welcome to PlaylistLand</a></h1>
+    <h1><a href="/song">Welcome to PlaylistLand</a></h1>
 
-Looks like we need to add a <code>get</code> route for <code>/playlist</code>. Add this again to <code>config/route.rb</code>
+Looks like we need to add a <code>get</code> route for <code>/song</code>. Add this again to <code>config/route.rb</code>
 
-    get '/playlist' => 'playlist#index'
+    get '/song' => 'song#index'
 
-Rspec is now looking for the <code>PlaylistController</code>, wich we will put inside <code>app/controllers/playlist_controller.rb</code>. We will add this to the file:
+Rspec is now looking for the <code>SongController</code>, wich we will put inside <code>app/controllers/song_controller.rb</code>. We will add this to the file:
 
-    class PlaylistController < ApplicationController
+    class SongController < ApplicationController
       def index
       end
     end
 
-And now another view... <code>playlist/index.html.erb</code>. Now rake spec is looking for the "Add new jam" link. Let's add that to the playlist index!
+And now another view... <code>song/index.html.erb</code>. Now rake spec is looking for the "Add new jam" link. Let's add that to the song index!
 
     <h1>PlaylistLand</h1>
     <hr>
-    <a href="/playlist/new">Add new Jam</a>
+    <a href="/song/new">Add new Jam</a>
 
 Now we add that to the <code>routes</code> file.
 
-    get '/playlist/new' => 'playlist#new'
+    get '/song/new' => 'song#new'
 
 And now we need to add the action 'new' to the Playlist Controller.
 
     def new
     end
 
-Next we are told that we are missing a template. Lets add <code>new.html.erb</code> to our <code>views/playlist</code> folder. This will contain the form for our data entry:
+Next we are told that we are missing a template. Lets add <code>new.html.erb</code> to our <code>views/song</code> folder. This will contain the form for our data entry:
 
-    <form action="/playlist" method="post">
+    <form action="/song" method="post">
       <input type="text" placeholder="Title" name="title">
       <input type="text" placeholder="URL" name="url">
       <input type="submit" value="Queue!">
@@ -132,20 +131,20 @@ Next we are told that we are missing a template. Lets add <code>new.html.erb</co
 
 Now we need to add a post route to the <code>routes.rb</code> file.
 
-      post 'playlist' => 'playlist#create'
+      post '/song' => 'song#create'
 
-Let's add that method to the playlist controller.
+Let's add that method to the song controller.
 
     def create
     end
 
-Now we are missing a template. However, we really don't want a new view for this, we just want to submit that new information in the form to the database, and then render it on the playlist index page. So let's add some stuff to that method. If you really want rspec to push you to do this, put in that redirect line first, and run your test again.
+Now we are missing a template. However, we really don't want a new view for this, we just want to submit that new information in the form to the database, and then render it on the song index page. So let's add some stuff to that method. If you really want rspec to push you to do this, put in that redirect line first, and run your test again.
 
     song = Song.new
     song.title = params[:title]
     song.url = params[:url]
     song.save
-    redirect_to '/playlist'
+    redirect_to '/song'
 
 Rake spec tells us that we have an uninitialized constant <code>PlaylistController::Song</code>. Check it out in localhost, too. Oh no, what's that? An invalid authenticity token? Go to <code>app/controller/application\_controller.rb</code> and comment out line 4 <code>protect\_from\_forgery with: :exception</code>. Refresh the browser. Ah, now our spec and browser agree. We will add a new file <code>app/models/song.rb</code> with the following code:
 
@@ -161,7 +160,7 @@ This command creates a migration in the <code>db/migrate</code> folder with a ti
     t.string :title
     t.string :url
 
-Remember that we have that title and url coming in from our form on the <code>/playlist/new</code> page? Let's run that migration!
+Remember that we have that title and url coming in from our form on the <code>/song/new</code> page? Let's run that migration!
 
     $ rake db:migrate
 
@@ -169,11 +168,11 @@ Nice job! Feel free to again poke around in the database from the command line a
 
     $ rails console
 
-Ok, back to our program. Rspec is now back to looking for the text "Mokadem - 'Mokadem' EP". So now we need to get that database to iterate in the <code>index.html.erb</code> file. We start that by defining some local variables... within <code>playlist\_controller.rb</code>, within <code>def index...end</code>:
+Ok, back to our program. Rspec is now back to looking for the text "Mokadem - 'Mokadem' EP". So now we need to get that database to iterate in the <code>index.html.erb</code> file. We start that by defining some local variables... within <code>song\_controller.rb</code>, within <code>def index...end</code>:
 
     @songs = Song.all
 
-Within <code>playlist/index.html.erb</code>:
+Within <code>song/index.html.erb</code>:
 
     <% @songs.each do |song| %>
       <%= song.title %> | <%= song.url %><br>
@@ -182,21 +181,18 @@ Within <code>playlist/index.html.erb</code>:
 Rspec says green! Let's check that baby out in the browser, and then commit!
 
     $ git status
-    $ git add -N app/controllers/playlist_controller.rb
-    $ git add -N app/models/song.rb app/views/playlist/index.html.erb
-    $ git add -N app/views/playlist/new.html.erb db/schema.rb
-    $ git add -N db/migrate/20140511162927_create_song.rb
+    $ git add -N app/ db/
     $ git add -p
     $ git status
-    $ git commit -m "User can add song titles and URLs, see songs listed on the playlist homepage"
+    $ git commit -m "User can add song titles and URLs, see songs listed on the song homepage"
 
-Nice! Next up in the CRUD cycle is Update... shall we? Lets have it where when you click the name of the song, you go to the song page, and there there is an edit button which takes you to a page to edit the title or url. Lets add this test to our <code>playlist_spec</code>.
+Nice! Next up in the CRUD cycle is Update... shall we? Lets have it where when you click the name of the song, you go to the song page, and there there is an edit button which takes you to a page to edit the title or url. Lets add this test to our <code>song_spec</code>.
 
     scenario 'User can update songs' do
       old_title = 'Touch'
       title = 'Holy Other - Touch'
       url = 'https://soundcloud.com/holyother/touch'
-      visit '/playlist'
+      visit '/song'
       click_on 'Add new Jam'
       fill_in 'Title', with: old_title
       fill_in 'URL', with: url
@@ -214,19 +210,19 @@ Nice! Next up in the CRUD cycle is Update... shall we? Lets have it where when y
 
 Looks like rake spec wants us to make the title link first. Dig in! We will wrap that song title on the index like so:
 
-      <a href="/playlist/<%= song.id %>"><%= song.title %></a> | <%= song.url %><br>
+      <a href="/song/<%= song.id %>"><%= song.title %></a> | <%= song.url %><br>
 
 
 Rspec tells us we need a new get route.
 
-    get '/playlist/:id' => 'playlist#show'
+    get '/song/:id' => 'song#show'
 
-Next, show cannot be found for PlaylistController. We put that in the <code>playlist\_controller.rb</code>.
+Next, show cannot be found for PlaylistController. We put that in the <code>song\_controller.rb</code>.
 
     def show
     end
 
-Looks like it's time to create another view. Do you know what it will be called and where it will go? It will be <code>app/views/playlist/show.html.erb</code>. Rspec now is looking for that title on the show page, and we are going to need to hand that show page a single song. We can do this by adding the following code to that show method:
+Looks like it's time to create another view. Do you know what it will be called and where it will go? It will be <code>app/views/song/show.html.erb</code>. Rspec now is looking for that title on the show page, and we are going to need to hand that show page a single song. We can do this by adding the following code to that show method:
 
     def show
       @song = Song.find(params[:id])
@@ -234,20 +230,20 @@ Looks like it's time to create another view. Do you know what it will be called 
 
 Now we need pass that to the show page to display the title, url, and then add the edit link.
 
-    <h3><%= @song.title %> | <%= @song.url %> | <a href="/playlist/<%= @song.id %>/edit">Edit</a></h3>
+    <h3><%= @song.title %> | <%= @song.url %> | <a href="/song/<%= @song.id %>/edit">Edit</a></h3>
 
 And add the get route...
 
-    get '/playlist/:id/edit' => 'playlist#edit'
+    get '/song/:id/edit' => 'song#edit'
 
-Add the method to the PlaylistController...
+Add the method to the SongController...
 
     def edit
     end
 
-We will have to pass in the song information indexed by the title link, so add <code>@song = Song.find(params[:id])</code> to the edit method. Then add the view. You know where it goes. I'll just tell you even though you totally know by now... in <code>views/playlist/edit.html.erb</code>. Running rspec tells us that we need that field "Title". Let's make that form for editing the Song information!
+We will have to pass in the song information indexed by the title link, so add <code>@song = Song.find(params[:id])</code> to the edit method. Then add the view. You know where it goes. I'll just tell you even though you totally know by now... in <code>views/song/edit.html.erb</code>. Running rspec tells us that we need that field "Title". Let's make that form for editing the Song information!
 
-    <form action="/playlist/<%= @song.id %>" method="post">
+    <form action="/song/<%= @song.id %>" method="post">
       <input type="hidden" name="_method" value="put"/>
       <input type="text" id="Title" value="<%= @song.title %>" name="title"/>
       <input type="text" id="URL" value="<%= @song.url %>" name="url"/>
@@ -256,27 +252,27 @@ We will have to pass in the song information indexed by the title link, so add <
 
 Whoa, there is some weird stuff going on there. Ok, we want to edit our record... there isn't really a method in browsers to do that. So we sort of make one by changing our method to "put" in that second line. And we would be jerks if we made people add all that information again on the edit page, so we can just fill out that form for the user and allow them to actually edit it. Now we need to add that <code>put</code> route in the routes file.
 
-    put '/playlist/:id' => 'playlist#update'
+    put '/song/:id' => 'song#update'
 
-Aaand, add that to our PlaylistController...
+Aaand, add that to our SongController...
 
     def update
     end
 
-That is going to be a <code>redirect_to '/playlist'</code>... what are we missing? Looks like we need to collect that information from the form and actually update the database. Our update method in the PlaylistController will finally look like this:
+That is going to be a <code>redirect_to '/song'</code>... what are we missing? Looks like we need to collect that information from the form and actually update the database. Our update method in the SongController will finally look like this:
 
     def update
       song = Song.find(params[:id])
       song.title = params[:title]
       song.url = params[:url]
       song.save
-      redirect_to '/playlist'
+      redirect_to '/song'
     end
 
 Whaaat? I almost forgot what green looked like. Check it in the browser, and commit this lovely beast.
 
     $ git status
-    $ git add -N app/views/playlist/edit.html.erb app/views/playlist/show.html.erb
+    $ git add -N app/views/song/edit.html.erb app/views/song/show.html.erb
     $ git add -p
     $ git status
     $ git commit -m "User can edit song title and url"
@@ -286,7 +282,7 @@ Awesome! We only have delete to go! Let's write that test.
     scenario 'User can delete songs' do
       title = 'Epic Rap Battle - Geek v Nerd'
       url = 'http://www.youtube.com/watch?v=2Tvy_Pbe5NA'
-      visit '/playlist'
+      visit '/song'
       click_on 'Add new Jam'
       fill_in 'Title', with: title
       fill_in 'URL', with: url
@@ -299,19 +295,19 @@ Awesome! We only have delete to go! Let's write that test.
 
 Looks like we start with the "Over it!" We add this to the show page:
 
-    <form action="/playlist/<%= @song.id %>" method="post">
+    <form action="/song/<%= @song.id %>" method="post">
       <input type="hidden" name="_method" value="delete"/>
       <input type="submit" value="Over it!">
     </form>
 
 And we add the route...
 
-    delete 'playlist/:id' => 'playlist#destroy'
+    delete 'song/:id' => 'song#destroy'
 
-And the method in the <code>PlaylistController</code>. We know this will be a redirect, so add that after running rspec again.
+And the method in the <code>SongController</code>. We know this will be a redirect, so add that after running rspec again.
 
     def destroy
-      redirect_to '/playlist'
+      redirect_to '/song'
     end
 
 Now we need to actually delete that content from our database table. In that destroy method, we again find the song (just like we did in update) and then just use the method destroy like so:
@@ -319,7 +315,7 @@ Now we need to actually delete that content from our database table. In that des
     def destroy
       song = Song.find(params[:id])
       song.destroy
-      redirect_to '/playlist'
+      redirect_to '/song'
     end
 
 What does rspec say? Browser check? Wonderful! Lets do our final commit for this wee project. Nice Job!
