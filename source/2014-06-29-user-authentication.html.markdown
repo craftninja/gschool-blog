@@ -4,9 +4,9 @@ date: 2014-06-29 03:00 UTC
 tags: ruby, rails, postgresql, user authentication
 ---
 
-Well, hello there!
+Well, hello there \<username\>!
 
-Today we are going to start a Rails User Authentication from scratch. This will step-by-step go through everything you need to create basic user registration and login. Basic, people, basic. You can make it pretty later.
+Today we are going to start a Rails User Authentication from scratch. This will go step-by-step through everything you need to create basic user registration and login. Basic, people, basic. You can make it pretty later.
 
     $ rails new user-auth --skip-spring --skip-test-unit --database=postgresql
     $ cd user-auth
