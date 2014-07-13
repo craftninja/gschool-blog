@@ -1,12 +1,12 @@
 ---
-title: Test Driving with Rspec
+title: Test Driving with RSpec
 date: 2014-04-21 03:00 UTC
 tags: ruby, programming, rspec, dice, 10000, tenthousand, DiceRoller
 ---
 
 [Oh Hai!](http://www.youtube.com/watch?v=QvxdDDHElZo)
 
-Lets write some classes from scratch using rspec. This is great way to start learning about definition of classes and test driven development. We will start by making a directory, cd-ing into it, initializing a git repository, initializing bundler, putting some gems in our gemfile, and bundling. Whew!
+Lets write some classes from scratch using RSpec. This is great way to start learning about definition of classes and test driven development. We will start by making a directory, cd-ing into it, initializing a git repository, initializing bundler, putting some gems in our gemfile, and bundling. Whew!
 
     $ mkdir dice_roller
     $ cd dice_roller
