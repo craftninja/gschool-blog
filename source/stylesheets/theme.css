@@ -77,9 +77,9 @@ a.logo:hover {
 }
 div.panel {
   background: #FAF0EF;
-  background: -moz-linear-gradient(top, #FAF0EF 0%, #AD998E 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FAF0EF), color-stop(100%, #AD998E));
-  background: -o-linear-gradient(top, #FAF0EF 0%, #AD998E 100%);
+  background: -moz-linear-gradient(top, #FAF0EF 0%, #F1E1DF 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FAF0EF), color-stop(100%, #F1E1DF));
+  background: -o-linear-gradient(top, #FAF0EF 0%, #F1E1DF 100%);
 }
 .blue.button {
   background-color: #2f84c2;
