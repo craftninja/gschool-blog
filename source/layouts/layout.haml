@@ -22,7 +22,6 @@
         %h2
           %a{href: "/"}= data.site.title
           %p= data.site.subtitle
-          %img{src: "/images/EmilyAidez.jpg", :width => "190px"}
         %hr
     .row
       .eight.columns
@@ -30,6 +29,7 @@
       / Application Javascript, safe to override
       = javascript_include_tag "app"
       %aside.four.columns
+        %img{src: "/images/EmilyAidez.jpg"}
 
         - if paginate
           .panel
