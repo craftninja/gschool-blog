@@ -14,6 +14,36 @@ a:hover {
 header {
   padding: 3em 0px 3em 0px;
 }
+.front_box {
+  background: white;
+  padding: 1em 1em 1em 2em;
+  margin-bottom: 1em;
+}
+
+.front_content {
+  padding: .5em 2em 0 1.5em;
+}
+
+nav {
+  background: #0E434C;
+  color: #FAF0EF;
+  display: flex;
+  flex-direction: row-reverse;
+}
+nav img {
+}
+.navlink {
+  background: #17707F;
+  padding: .75em;
+  font-size: 2em;
+  padding-top: 1.1em;
+}
+.navimg {
+    width: 3em;
+    background: #17707F;
+    padding: .75em;
+    font-size: 2em;
+}
 nav a {
   margin-right: 0.5em;
   color: #ededed;

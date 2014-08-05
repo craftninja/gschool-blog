@@ -14,6 +14,8 @@ require "zurb-foundation"
 # Page options, layouts, aliases and proxies
 ###
 
+activate :directory_indexes
+
 activate :blog do |blog|
   # blog.prefix = "blog"
   # blog.permalink = ":year/:month/:day/:title.html"
