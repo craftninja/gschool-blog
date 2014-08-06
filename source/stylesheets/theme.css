@@ -28,6 +28,7 @@ nav {
   background: #0E434C;
   color: #FAF0EF;
   display: inline-flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
   margin-bottom: .5em;
