@@ -27,10 +27,18 @@ header {
 nav {
   background: #0E434C;
   color: #FAF0EF;
-  display: flex;
-  flex-direction: row-reverse;
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: .5em;
 }
-nav img {
+.navright {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  float: right;
+}
+.navleft {
+  padding-left: 1em;
 }
 .navlink {
   background: #17707F;
@@ -43,6 +51,12 @@ nav img {
     background: #17707F;
     padding: .75em;
     font-size: 2em;
+}
+nav h2 a {
+    color: #17707F;
+}
+nav p {
+    color: #FAF0EF;
 }
 nav a {
   margin-right: 0.5em;

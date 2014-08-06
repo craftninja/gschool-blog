@@ -18,20 +18,19 @@
     %link{rel: "alternate", type: "application/rss+xml", title: "RSS Feed", href: "feed.xml"}
   %body{class: page_classes}
     %nav
-      %a{class: "navlink", href: "/blog"}= "Blog"
-      %a{class: "navimg", href: "https://twitter.com/EmilyPlatzer"}
-        %img{src: "/images/blog_imgs/tweeter.png"}
-      %a{class: "navimg", href: "https://github.com/craftninja"}
-        %img{src: "/images/blog_imgs/github.png"}
-      %a{class: "navimg", href: "https://www.linkedin.com/in/emilyplatzer"}
-        %img{src: "/images/blog_imgs/linkedin.png"}
-
-    .row
-      .twelve.columns
+      %div{class: "navleft"}
         %h2
           %a{href: "/"}= data.site.title
           %p= data.site.subtitle
-        %hr
+      %div{class: "navright"}
+        %a{class: "navlink", href: "/blog"}= "Blog"
+        %a{class: "navimg", href: "https://twitter.com/EmilyPlatzer"}
+          %img{src: "/images/blog_imgs/tweeter.png"}
+        %a{class: "navimg", href: "https://github.com/craftninja"}
+          %img{src: "/images/blog_imgs/github.png"}
+        %a{class: "navimg", href: "https://www.linkedin.com/in/emilyplatzer"}
+          %img{src: "/images/blog_imgs/linkedin.png"}
+
     .row
       .eight.columns
         = yield
