@@ -8,7 +8,7 @@ Oh haaay, remember me?
 
 So gSchool Boulder has started a new class, and guess who are the new teaching assistants!?
 
-[<img src="/images/20141027_git_config/Emily_and_Luke.png" alt="Emily and Luke" width="600em">](/images/20141027_git_config/Emily_and_Luke.png)
+[<img src="/images/20141027_git_config/luke_and_emily.jpg" alt="Emily and Luke" width="600em">](/images/20141027_git_config/luke_and_emily.jpg)
 
 Helping the students set up their computers reminded me of how important it is to know how to access and understand your git config options. Since usually a user sets up their config options once and never checks them again, it is often forgotten shortly after computer setup. Let's revisit!
 
