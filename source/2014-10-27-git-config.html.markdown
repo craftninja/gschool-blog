@@ -54,7 +54,7 @@ The bottom variable allows for git output to the terminal to be color coded... s
 
     $ git config --global alias.<alias_name>=<full git command with appropriate flags and spacing>
 
-May I STONGLY suggest that you make sure you are NOT overwriting and existing git command with a poorly chosen alias name, and also TEST the full git command to make sure you are not making a typo or forgetting a flag for your new alias. Once again, to check all your git config global variable settings, run:
+May I STONGLY suggest that you make sure you are NOT overwriting an existing git command with a poorly chosen alias name, and also TEST the full git command to make sure you are not making a typo or forgetting a flag for your new alias. Once again, to check all your git config global variable settings, run:
 
     $ git config --global -l
 
