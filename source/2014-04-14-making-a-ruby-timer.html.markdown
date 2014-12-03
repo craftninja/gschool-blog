@@ -10,7 +10,7 @@ Did you know that your computer can talk to you? Try pasting the below code into
 
 What the what? So cool, right? Mess around with that for a bit, and try pasting the following monster line of code into IRB to sample all the voices on your computer...
 
-    \> `say -v ?`.split(/\n/).map{|l| l[0, l.index('en_')].strip}.each{|v| puts v; %x[say -v \"#{v}\" \"I am #{v}\"]; sleep(0.5) }
+    \> `say -v ?`.split(/\n/).map{|l| l[0, l.index('  ')].strip}.each{|v| puts v; %x[say -v \"#{v}\" \"I am #{v}\"]; sleep(0.5) }
 
 OMG how do you choose!?!
 
