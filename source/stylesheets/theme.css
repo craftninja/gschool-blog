@@ -1,5 +1,5 @@
 body {
-  background: #FAF0EF;
+  background: #effcf7;
   font-family: "Lustria", "Helvetica Neue", "HelveticaNeue", Helvetica, sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -26,7 +26,7 @@ header {
 
 nav {
   background: #0E434C;
-  color: #FAF0EF;
+  color: #effcf7;
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -61,7 +61,7 @@ nav h2 a {
     color: #17707F;
 }
 nav p {
-    color: #FAF0EF;
+    color: #effcf7;
 }
 nav a {
   margin-right: 0.5em;
@@ -125,10 +125,10 @@ a.logo:hover {
   border-top: 4px solid #ededed;
 }
 div.panel {
-  background: #FAF0EF;
-  background: -moz-linear-gradient(top, #FAF0EF 0%, #F1E1DF 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FAF0EF), color-stop(100%, #F1E1DF));
-  background: -o-linear-gradient(top, #FAF0EF 0%, #F1E1DF 100%);
+  background: #effcf7;
+  background: -moz-linear-gradient(top, #effcf7 0%, #cce5db 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #effcf7), color-stop(100%, #cce5db));
+  background: -o-linear-gradient(top, #effcf7 0%, #cce5db 100%);
 }
 .blue.button {
   background-color: #2f84c2;

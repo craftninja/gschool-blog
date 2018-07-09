@@ -129,3 +129,9 @@ DEPENDENCIES
   rack-contrib (~> 1.1.0)
   redcarpet (~> 3.0.0)
   zurb-foundation (~> 3.2.3)
+
+RUBY VERSION
+   ruby 2.0.0p648
+
+BUNDLED WITH
+   1.16.2
