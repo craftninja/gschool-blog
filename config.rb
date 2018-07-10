@@ -2,6 +2,8 @@
 # Compass
 ###
 
+Haml::TempleEngine.disable_option_validator!
+
 # ZURB Foundation
 require "zurb-foundation"
 

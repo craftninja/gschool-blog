@@ -1,7 +1,8 @@
 source "https://rubygems.org"
 
-ruby '2.0.0'
+ruby '2.3.7'
 
+gem 'compass', '~> 0.12.3'
 gem 'middleman', '~> 3.2.2'
 gem 'middleman-core', '~> 3.2.2'
 
