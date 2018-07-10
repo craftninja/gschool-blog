@@ -2,3 +2,4 @@
 .bundle/
 source/.DS_Store
 source/images/.DS_Store
+/certs
