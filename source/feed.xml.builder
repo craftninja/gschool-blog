@@ -2,9 +2,9 @@ xml.instruct!
 xml.feed "xmlns" => "http://www.w3.org/2005/Atom" do
   xml.title "Emily Platzer Makes Things"
   xml.subtitle "Lets get real crafty | All Earthling Technology is Our Culture"
-  xml.id "http://www.emilyplatzer.io/"
-  xml.link "href" => "http://www.emilyplatzer.io/"
-  xml.link "href" => "http://www.emilyplatzer.io/feed.xml", "rel" => "self"
+  xml.id "https://www.emilyplatzer.com/"
+  xml.link "href" => "https://www.emilyplatzer.com/"
+  xml.link "href" => "https://www.emilyplatzer.com/feed.xml", "rel" => "self"
   xml.updated blog.articles.first.date.to_time.iso8601
   xml.author { xml.name "Emily Platzer" }
 
