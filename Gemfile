@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby '2.3.7'
+ruby '2.3.8'
 
 gem 'compass', '~> 0.12.3'
 gem 'middleman', '~> 3.2.2'
